@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="sc/style.css" type="text/css" />
+  </head>
+  <body>
+    <script src="sc/key.js"></script>
+    <script src="sc/focusManager.js"></script>
+    <span class="h4">&nbsp;</span>
+    <div id="testlist" class="container">
+      <div class="default-list">
+        <div class="cell-column">
+          <div>
+            <span class="cell-category">Renewals</span>
+          </div>
+          <div class="cell-name">
+            <span class="focusable" tabindex="0" onclick="goTest(1)"
+              >1. RenewalNoUsage</span
+            >
+          </div>
+          <div class="cell-name">
+            <span class="focusable" tabindex="0" onclick="goTest(2)"
+              >2. EntitlementLicense</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function goTest(index) {
+        window.location.href = "player.html?index=" + index;
+      }
+    </script>
+  </body>
+</html>
