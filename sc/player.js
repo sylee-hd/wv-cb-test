@@ -24,7 +24,15 @@ function playUrl(title, url, licenseServer, result) {
     document.getElementById("result-value").textContent = "";
 
     player.configure({
-        drm: { servers: { "com.widevine.alpha": licenseServer } },
+        drm: {
+                servers: { "com.widevine.alpha": licenseServer },
+                advanced: {
+                    'com.widevine.alpha': {
+                        'videoRobustness': 'SW_SECURE_DECODE',
+                        'audioRobustness': 'SW_SECURE_DECODE'
+                    }
+                }
+            },
     });
     player
         .load(url)
